@@ -6,7 +6,3 @@ ai/point_cloud_classification/model/*t7
 *.pth
 *.pyc
 
-# temp
-Readme.md
-data/
-
