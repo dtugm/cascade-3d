@@ -8,31 +8,29 @@ The CASCADE-3D GUI provides tools for interactive digitization, automatic regula
 
 For LOD2 reconstruction, CASCADE-3D emphasizes accurate roof structure extraction by analyzing roof orientation and geometric configuration. Roof detection techniques based on building aspect are applied to capture complex architectural forms. The system was evaluated using point clouds and orthophotos from 1,215 buildings across multiple provinces in Indonesia, representing diverse architectural patterns and land cover types. The results demonstrate CASCADE-3D’s capability in building outline detection, roof structure extraction, and automated LOD1 and LOD2 3D building reconstruction.
 
+<!-- ![Preview](public/img/interactive_digitization.png) -->
+<p align="center">
+  <img src="public/img/interactive_digitization.png" width="300"/>
+  <img src="public/img/refine_rs_bo.png" width="300"/>
+  <img src="public/img/3d_viewer.png" width="300"/>
+</p>
+
+
 ## Device & System Requirements
-### Hardware
-
-- **GPU**: NVIDIA GPU with CUDA support
-
-- **Recommended**: Compute Capability ≥ 6.1
-
+### Hardware (Minimum requirements)
+- **GPU**: NVIDIA GeForce  GTX 1050 4GB
 - **RAM**: Minimum 8 GB (16 GB recommended)
-
-- **Storage**: ≥ 10 GB free disk space
+- **Storage**: ≥ 15 GB free disk space
 
 
 ### Software
-
 - **Operating System**: Windows 10 / 11 (64-bit)
-
 - **Python**: Python 3.9
-
 - **NVIDIA Driver**: Compatible with CUDA 11.8
-
 - **Git**: Required for git-based dependencies
 
 
 ### CUDA Requirement
-
 This project uses CUDA-enabled PyTorch.
 
 #### Verify CUDA support
@@ -73,18 +71,14 @@ cascade-3d/
 ```
 
 ## Sample Data
-
 Sample datasets are located in the data/ directory.
 
 - Used for testing and demonstration
-
 - You may replace or add your own datasets here
-
 - No additional configuration is required
 
 
 ## SAM Model Setup
-
 This application requires a Segment Anything Model (SAM) checkpoint.
 
 ### Download
@@ -100,7 +94,6 @@ ai/sam/model/sam_vit_h_4b8939.pth
 Make sure the file path matches exactly.
 
 ## Virtual Environment Setup
-
 Create a virtual environment in the project root:
 
 ```bash
@@ -113,7 +106,6 @@ Activate the environment:
 .\venv\Scripts\activate
 ```
 ## PowerShell Execution Policy Issue
-
 If you encounter:
 ```bash
 Activate.ps1 cannot be loaded because running scripts is disabled
@@ -127,18 +119,13 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 Then activate the virtual environment again.
 
 ## Dependencies Installation
-
 All dependencies are managed via requirements.txt, including:
 
 - CUDA-enabled PyTorch (CUDA 11.8)
-
 - Local GDAL wheel
-
 - Geospatial and ML libraries
 
-
 From the project root:
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -146,77 +133,34 @@ pip install -r requirements.txt
 Local GDAL Wheel
 
 GDAL is installed from a relative local wheel located in:
-
 ```bash
 lib/GDAL-3.4.3-cp39-cp39-win_amd64.whl
 ```
 
 This ensures portability for other users using Python 3.9 on Windows.
 
-Verify Installation (Optional)
-```bash
-python - <<EOF
-import torch
-from osgeo import gdal
-
-print("CUDA available:", torch.cuda.is_available())
-print("GDAL version:", gdal.VersionInfo())
-EOF
-```
-
-Expected:
-
-CUDA available: True
-
-GDAL version 3040300 (or similar)
-
 ## Running the Application
-
 1. Open a terminal in the project root
-
 2. Activate the virtual environment
-
 3. Run the application:
-
 ```bash
 python main.py
 ```
 
 ## Troubleshooting
-### GDAL Installation Fails
-
-- Ensure Python version is 3.9
-
-- Ensure the wheel filename matches cp39
-
-- Do not install gdal from PyPI
-
 ### CUDA Not Detected
-
 - Update NVIDIA driver
-
 - Verify with nvidia-smi
 
 ### DLL or Import Errors
-
 - Make sure all installs were done inside the virtual environment
-
 - Avoid mixing global Python packages
 
-- Developer Notes
-
+### Developer Notes
 - CUDA version: 11.8
-
 - Python version is strictly pinned to 3.9
-
 - GDAL is installed from a local wheel for stability
-
-- Suitable for PyInstaller packaging (with additional hooks)
 
 ## Video Tutorials
 The following video tutorials provide step-by-step guidance for using each feature in CASCADE-3D.
 Each video demonstrates the workflow, required inputs, and expected outputs.
-
-```
-https://www.youtube.com
-```
