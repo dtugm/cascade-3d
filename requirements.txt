@@ -1,3 +1,14 @@
+# ---------- Local wheels ----------
+--find-links ./lib
+
+# ---------- PyTorch CUDA ----------
+--index-url https://download.pytorch.org/whl/cu118
+--extra-index-url https://pypi.org/simple
+
+torch==2.7.1
+torchvision==0.22.1
+torchaudio==2.7.1
+
 numpy==1.26.4
 pandas==2.2.1
 roboflow==1.1.26

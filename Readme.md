@@ -1,5 +1,5 @@
 # Cascade 3D
-## Description
+### Description
 CASCADE-3D (CAdastre and Spatial map adjustment with spatial Computation for Automatic builDing dEtection and 3D generation) is a graphical user interface (GUI) designed to support fast and accurate generation of geospatial data and three-dimensional (3D) building properties for multipurpose land management applications. The system focuses on the automated reconstruction of 3D building models at Levels of Detail (LOD) 1 and 2 using integrated photogrammetric processing and deep-learning-based spatial analysis.
 
 CASCADE-3D integrates advanced deep-learning frameworks, including the Segment Anything Model (SAM) and Dynamic Graph Convolutional Neural Network (DGCNN), to automate building outline detection and point cloud classification. Photogrammetric processing based on Structure-from-Motion (SfM) and Multi-View Stereo (MVS) techniques is first applied to generate dense point clouds, true orthophotos, and Building Height Models (BHMs) from unmanned aerial vehicle (UAV) imagery. Building outlines are then extracted using SAM, a promptable segmentation model capable of zero-shot generalization without additional training.
@@ -10,20 +10,20 @@ For LOD2 reconstruction, CASCADE-3D emphasizes accurate roof structure extractio
 
 <!-- ![Preview](public/img/interactive_digitization.png) -->
 <p align="center">
-  <img src="public/img/interactive_digitization.png" width="300"/>
-  <img src="public/img/refine_rs_bo.png" width="300"/>
-  <img src="public/img/3d_viewer.png" width="300"/>
+  <img src="public/img/interactive_digitization.png" width="250"/>
+  <img src="public/img/refine_rs_bo.png" width="250"/>
+  <img src="public/img/3d_viewer.png" width="250"/>
 </p>
 
 
 ## Device & System Requirements
-### Hardware (Minimum requirements)
+#### Hardware (Minimum requirements)
 - **GPU**: NVIDIA GeForce  GTX 1050 4GB
 - **RAM**: Minimum 8 GB (16 GB recommended)
 - **Storage**: ≥ 15 GB free disk space
 
 
-### Software
+#### Software
 - **Operating System**: Windows 10 / 11 (64-bit)
 - **Python**: Python 3.9
 - **NVIDIA Driver**: Compatible with CUDA 11.8
@@ -79,15 +79,14 @@ Sample datasets are located in the data/ directory.
 - No additional configuration is required
 
 
-## SAM Model Setup
+### SAM Model Setup
 This application requires a Segment Anything Model (SAM) checkpoint.
-
-### Download
+#### Download
 ```bash
 https://huggingface.co/spaces/abhishek/StableSAM/blob/main/sam_vit_h_4b8939.pth
 ```
 
-### Placement
+#### Placement
 ```bash
 ai/sam/model/sam_vit_h_4b8939.pth
 ```
@@ -149,15 +148,15 @@ python main.py
 ```
 
 ## Troubleshooting
-### CUDA Not Detected
+#### CUDA Not Detected
 - Update NVIDIA driver
 - Verify with nvidia-smi
 
-### DLL or Import Errors
+#### DLL or Import Errors
 - Make sure all installs were done inside the virtual environment
 - Avoid mixing global Python packages
 
-### Developer Notes
+#### Developer Notes
 - CUDA version: 11.8
 - Python version is strictly pinned to 3.9
 - GDAL is installed from a local wheel for stability
@@ -166,5 +165,5 @@ python main.py
 The following video tutorials provide step-by-step guidance for using each feature in CASCADE-3D.
 Each video demonstrates the workflow, required inputs, and expected outputs.
 ```
-https://youtu.be/TTnhukH0XYA
+https://youtu.be/fsQShqz7_xw
 ```
