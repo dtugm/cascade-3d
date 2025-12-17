@@ -53,16 +53,17 @@ cascade-3d/
 │  ├─ point_cloud_classification
 │  ├─ refine_rs_bo
 │  └─ roof_footprint
-├─ enums/
-├─ lib/
-│  └─ GDAL-3.4.3-cp39-cp39-win_amd64.whl
-├─ public/
-│  └─ icon/
 ├─ ui/
 │  ├─ components/
 │  ├─ lod1_tab.py
 │  ├─ sam_interactive_tab.py
 │  └─ ...
+├─ public/
+│  └─ icon/
+│  └─ img/
+├─ lib/
+│  └─ GDAL-3.4.3-cp39-cp39-win_amd64.whl
+├─ enums/
 ├─ utils/
 ├─ data/
 ├─ requirements.txt
@@ -164,3 +165,6 @@ python main.py
 ## Video Tutorials
 The following video tutorials provide step-by-step guidance for using each feature in CASCADE-3D.
 Each video demonstrates the workflow, required inputs, and expected outputs.
+```
+https://youtu.be/TTnhukH0XYA
+```
