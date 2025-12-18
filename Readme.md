@@ -30,10 +30,10 @@ For LOD2 reconstruction, CASCADE-3D emphasizes accurate roof structure extractio
 - **Git**: Required for git-based dependencies
 
 
-### CUDA Requirement
+#### CUDA Requirement
 This project uses CUDA-enabled PyTorch.
 
-#### Verify CUDA support
+##### Verify CUDA support
 ```bash
 nvidia-smi
 ```
@@ -72,26 +72,13 @@ cascade-3d/
 ```
 
 ## Sample Data
-Sample datasets are located in the data/ directory.
+Sample datasets are available via **GitHub Releases** (tag: `data`):
 
-- Used for testing and demonstration
-- You may replace or add your own datasets here
-- No additional configuration is required
+https://github.com/dtugm/cascade-3d/releases/tag/data
 
+- For testing and demonstration  
+- No additional configuration required
 
-### SAM Model Setup
-This application requires a Segment Anything Model (SAM) checkpoint.
-#### Download
-```bash
-https://huggingface.co/spaces/abhishek/StableSAM/blob/main/sam_vit_h_4b8939.pth
-```
-
-#### Placement
-```bash
-ai/sam/model/sam_vit_h_4b8939.pth
-```
-
-Make sure the file path matches exactly.
 
 ## Virtual Environment Setup
 Create a virtual environment in the project root:
@@ -105,7 +92,7 @@ Activate the environment:
 ```bash
 .\venv\Scripts\activate
 ```
-## PowerShell Execution Policy Issue
+### PowerShell Execution Policy Issue
 If you encounter:
 ```bash
 Activate.ps1 cannot be loaded because running scripts is disabled
@@ -139,6 +126,21 @@ lib/GDAL-3.4.3-cp39-cp39-win_amd64.whl
 
 This ensures portability for other users using Python 3.9 on Windows.
 
+
+#### SAM Model Setup
+This application requires a Segment Anything Model (SAM) checkpoint.
+##### Download
+```bash
+https://huggingface.co/spaces/abhishek/StableSAM/blob/main/sam_vit_h_4b8939.pth
+```
+
+##### Placement
+```bash
+ai/sam/model/sam_vit_h_4b8939.pth
+```
+
+Make sure the file path matches exactly.
+
 ## Running the Application
 1. Open a terminal in the project root
 2. Activate the virtual environment
@@ -163,7 +165,6 @@ python main.py
 
 ## Video Tutorials
 The following video tutorials provide step-by-step guidance for using each feature in CASCADE-3D.
-Each video demonstrates the workflow, required inputs, and expected outputs.
-```
-https://youtu.be/fsQShqz7_xw
-```
+The video demonstrates the workflow, required inputs, and expected outputs.
+
+[![Watch the video](https://img.youtube.com/vi/ySG6bgn2Idk/0.jpg)](https://youtu.be/ySG6bgn2Idk)
