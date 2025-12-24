@@ -16,7 +16,7 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtGui import QFont, QPixmap, QIcon
 from PyQt5.QtCore import Qt
 
-# from ui.sam_interactive_tab import SamInteractiveTabWidget
+from ui.sam_interactive_tab import SamInteractiveTabWidget
 from ui.point_cloud_classification_tab import PointCloudClassificationTabWidget
 from ui.roof_footprint_tab import RoofFootprintTabWidget
 from ui.refine_rs_bo_tab import RefineRSBOTabWidget
@@ -116,7 +116,7 @@ class MyTabWidget(QWidget):
 		self.tabs.resize(300, 200) 
 
 		# Add tabs 
-		# self.tabs.addTab(SamInteractiveTabWidget(LayoutType.vertical.value), "Interactive Digitization (BO)") 
+		self.tabs.addTab(SamInteractiveTabWidget(LayoutType.vertical.value), "Interactive Digitization (BO)") 
 		self.tabs.addTab(PointCloudClassificationTabWidget(LayoutType.vertical.value), "Point Clouds classification")
 		self.tabs.addTab(RoofFootprintTabWidget(LayoutType.vertical.value), "Roof Structure (RS)")
 		self.tabs.addTab(RefineRSBOTabWidget(LayoutType.vertical.value), "Refine RS/BO") 

@@ -80,7 +80,7 @@ class PointCloudClassificationTabWidget(QtWidgets.QWidget):
         self.model = FileInputComponent(
             "Model",
             button_font_color="white",
-            defaultValue=os.path.join(get_base_dir(), "cascade-3d", "ai", "point_cloud_classification", "model", "DGCNN_RGB.pkl")
+            defaultValue=os.path.join(get_base_dir(), "cascade-3d", "ai", "point_cloud_classification", "model", "DGCNN_RGB.t7")
         )
         self.layout.addWidget(self.model)
         
